@@ -1,9 +1,12 @@
-import Counter from "./counter/Counter";
+// import Counter from "./counter/Counter";
+
+import StopWatch from "./stopwatch/StopWatch";
 
 function App() {
   return (
     <div className="container">
-      <Counter />
+      {/* <Counter /> */}
+      <StopWatch />
     </div>
   );
 }
