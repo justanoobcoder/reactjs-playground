@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Counter from "./counter/Counter";
 import RandomQuote from "./quote/RandomQuote";
+import InfiniteScroll from "./scroll/InfiniteScroll";
 import StopWatch from "./stopwatch/StopWatch";
 
 function App() {
@@ -12,13 +13,18 @@ function App() {
     },
     {
       value: "stop-watch",
-      text: "Stop watch",
+      text: "Stop Watch",
       component: <StopWatch />,
     },
     {
       value: "random-quotes",
-      text: "Random quotes",
+      text: "Random Quotes",
       component: <RandomQuote />,
+    },
+    {
+      value: "infinite-scroll",
+      text: "Infinite Scroll",
+      component: <InfiniteScroll />,
     },
   ];
 
