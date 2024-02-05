@@ -1,13 +1,49 @@
-// import Counter from "./counter/Counter";
-
+import Counter from "./counter/Counter";
+import { useState } from "react";
 import StopWatch from "./stopwatch/StopWatch";
 
 function App() {
+  const options = [
+    {
+      value: "counter",
+      text: "Counter",
+      component: <Counter />,
+    },
+    {
+      value: "stop-watch",
+      text: "Stop watch",
+      component: <StopWatch />,
+    },
+  ];
+
+  const [selected, setSelected] = useState(0);
+
+  function handleSelect(e) {
+    for (let i = 0; i < options.length; i++) {
+      if (options[i].value === e.target.value) {
+        setSelected(i);
+        break;
+      }
+    }
+  }
+
   return (
-    <div className="container">
-      {/* <Counter /> */}
-      <StopWatch />
-    </div>
+    <>
+      <div className="m-5">
+        <select
+          value={options[selected].value}
+          onChange={handleSelect}
+          className="rounded-sm p-2 bg-red-100"
+        >
+          {options.map((o) => (
+            <option key={o.value} value={o.value}>
+              {o.text}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div className="container">{options[selected].component}</div>
+    </>
   );
 }
 
