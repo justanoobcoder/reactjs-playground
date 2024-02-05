@@ -25,12 +25,8 @@ function App() {
   const [selected, setSelected] = useState(0);
 
   function handleSelect(e) {
-    for (let i = 0; i < options.length; i++) {
-      if (options[i].value === e.target.value) {
-        setSelected(i);
-        break;
-      }
-    }
+    const index = options.findIndex((o) => o.value === e.target.value);
+    setSelected(index);
   }
 
   return (
