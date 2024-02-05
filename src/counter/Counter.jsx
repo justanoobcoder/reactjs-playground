@@ -9,11 +9,11 @@ export default function Counter() {
   return (
     <div className="text-center">
       <button className="round-btn text-xl" onClick={handleAdd}>
-        +
+        <i className="fa-solid fa-plus"></i>
       </button>
       <h1 className="text-4xl my-5">{counter}</h1>
       <button className="round-btn text-xl" onClick={handleMinus}>
-        -
+        <i className="fa-solid fa-minus"></i>
       </button>
     </div>
   );
