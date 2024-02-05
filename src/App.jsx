@@ -1,5 +1,6 @@
-import Counter from "./counter/Counter";
 import { useState } from "react";
+import Counter from "./counter/Counter";
+import RandomQuote from "./quote/RandomQuote";
 import StopWatch from "./stopwatch/StopWatch";
 
 function App() {
@@ -13,6 +14,11 @@ function App() {
       value: "stop-watch",
       text: "Stop watch",
       component: <StopWatch />,
+    },
+    {
+      value: "random-quotes",
+      text: "Random quotes",
+      component: <RandomQuote />,
     },
   ];
 
